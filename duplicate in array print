@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int first_list[]={1,2,4,5,1,2,6};
+	int arr_size= sizeof(first_list)/sizeof(first_list[0]);
+	
+	unordered_set<int> container; //hash set initialisation
+	
+	for(int i =0; i < arr_size; i++){
+	    if(container.find(first_list[i])!=container.end()){
+	        cout<< first_list[i] << "\n";
+	    }
+	    else{
+	        container.insert(first_list[i]);
+	    }
+	}
+	
+
+}
