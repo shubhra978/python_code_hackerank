@@ -1,20 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-	int first_list[]={1,2,4,5,1,2,6};
-	int arr_size= sizeof(first_list)/sizeof(first_list[0]);
-	
-	unordered_set<int> container; //hash set initialisation
-	
-	for(int i =0; i < arr_size; i++){
-	    if(container.find(first_list[i])!=container.end()){
-	        cout<< first_list[i] << "\n";
-	    }
-	    else{
-	        container.insert(first_list[i]);
-	    }
-	}
-	
 
+int main(){
+    vector <int> list_of_numbers = {1,3,5,7,9,2,1,3};
+    
+    int sizeof_list = list_of_numbers.size();
+    
+    unordered_set <int> container; //assigning a hashset
+    
+    
+    for(int i=0; i< sizeof_list; i++){
+        if(container.find(list_of_numbers[i])!= container.end()){ //checking for the number in hashset
+            cout << "duplicate found " << list_of_numbers[i];
+        }
+        else{
+            container.insert(list_of_numbers[i]);
+        }
+    }
+    
+    
+    
 }
